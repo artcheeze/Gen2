@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
-    
+
     <style>
         body {
             background-image: url("https://www.bestpokiestoplay.com/wp-content/themes/made/images/backgrounds/bg-blur-31.jpg");
@@ -35,9 +35,10 @@
             font-family: 'Kanit', sans-serif;
             color: rgb(92, 88, 88);
         }
-        h3{
+
+        h3 {
             position: relative;
-            top: 0%;
+            top:45%;
             margin-bottom: 30%;
             color: white;
         }
@@ -53,8 +54,8 @@
 
         h6 {
             position: relative;
-            left: 30%;
-            top: -10%;
+            left: 7%;
+            top: -7%;
             font-family: 'Kanit', sans-serif;
             color: white;
 
@@ -71,35 +72,100 @@
             font-family: "Kimberley";
             src: url(http://www.princexml.com/fonts/larabie/kimberle.ttf) format("truetype");
         }
-        .container{
-    
-                position: relative;
-                
-                margin-top:10%;
-            }
-        #col2{
-            border-right-style: solid;
-            padding-right:2.5%;
-       padding-left:2.5%;
-       border-color: white;
-            }
-       #col1{
-        border-right-style: solid;
-       padding-right:2%;
-       padding-left:2%;
-        border-color: white;
-        
-       }
-       #col3{
-        padding-left:2%;
-       }
-       .back{
-           margin-top:10%;
-       }
-       
+
+        .col {
+            position: relative;
+            left: 0%;
+            margin: -10%;
+        }
+
+        .container {
+
+            position: relative;
+            
+        }
+
+
+
+
+        .back {
+            margin-top: 0%;
+        }
+
+        nav {
+
+            width: 100%;
+            left: 13%;
+            position: absolute;
+            margin-top: 25%;
+        }
+
+        a {
+            margin: 2%;
+        }
     </style>
     <link rel="stylesheet" href="button.css">
-    <script src="sc.js"></script>
+    <script>
+     var one = new Audio("Asset/1/h_normal.mp3");
+     var two = new Audio("Asset/1/h_fail.mp3");
+     var t = new Audio("Asset/1/phone.mp3")
+    
+    var b1 = true;
+    var b2 = true;
+    var b3 = true;
+
+        
+       
+        function a1(){
+       
+            if (b1 == true) {
+                one.currentTime = 0;
+                one.play();
+                b1 = false;
+            }
+            else {
+                one.pause();
+                b1 = true;
+                
+            }
+       }
+
+       function a2(){
+        
+             if (b2 == true) {
+                 two.currentTime = 0;
+                 two.play();
+                 b2 = false;
+             }
+             else {
+                 two.pause();
+                 b2 = true;
+                 
+             }
+        }
+
+        function a3(){
+            
+                 if (b3 == true) {
+                    b3 = false;
+                    for (i = 0; i < 99; i++) { 
+                        t.currentTime = 0;
+                        t.play();
+                    }
+                    
+                     
+                     
+                 }
+                 else {
+                     t.pause();
+                     b3 = true;
+                     
+                 }
+            }
+
+      
+       
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -121,76 +187,83 @@
             <div class="row">
 
 
-                <div class="col" id="col1">
-                        <h3>Scence โรงพยาบาล</h3>
+                <div class="col">
+                    <h3>Scence 1 โรงพยาบาล</h3>
 
 
 
                     <label class="switch">
-                        <input type="checkbox" onchange="a1()" >
-                        <span class="slider round" ></span>
+                        <input type="checkbox" onchange="a1()">
+                        <span class="slider round"></span>
                     </label>
                     <h6>เครื่องวัดชีพจร(ปกติ)</h6>
 
                     <label class="switch">
-                            <input type="checkbox" onchange="a11()" >
-                            <span class="slider round" ></span>
+                        <input type="checkbox" onchange="a2()">
+                        <span class="slider round"></span>
+                    </label>
+                    <h6>เครื่องวัดชีพจร(ตาย)</h6>
+
+                    <label class="switch">
+                            <input type="checkbox" onchange="a3()">
+                            <span class="slider round"></span>
                         </label>
-                        <h6>เครื่องวัดชีพจร(ตาย)</h6>
-    
+                        <h6>โทรศัพท์</h6>
+
+
+
 
 
 
 
                     <div class="back">
-                    <h6>Background music</h6>
-                    <audio src="sound/die/2-panam.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
-                </div>
+                        <h6>Background music</h6>
+                        <audio src="sound/die/2-panam.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
+                    </div>
 
                 </div>
-                <div class="col" id="col2">
-                        <h3>Scence 2</h3>
-                        <label class="switch">
-                           
-                            <input id="uu" type="checkbox" onchange="a2()" >
-                            <span class="slider round" ></span>
-                        </label>
-    
-                        <h6>เครื่องวัดชีพจร</h6>
-    
-    
-    
-    
-                        <div class="back">
-                        <h6>Background music</h6>
-                        <audio src="sound/die/2-panam.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
-                    </div>
-    
-                </div>
-                <div class="col" id="col3">
-                        <h3>Scence 3</h3>
-                        <label class="switch">
-                           
-                            <input id="uu" type="checkbox" onchange="a3()" >
-                            <span class="slider round" ></span>
-                        </label>
-    
-                        <h6>เครื่องวัดชีพจร</h6>
-    
-    
-    
-    
-                        <div class="back">
-                        <h6>Background music</h6>
-                        <audio src="sound/die/2-panam.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
-                    </div>
-    
+
             </div>
+
+
+
         </div>
+        <nav>
+            <a href="index.html">
+                <button type="button" class="btn btn-info">1</button>
+            </a>
+            <a href="l2.html">
+                <button type="button" class="btn btn-info">2</button>
+            </a>
+            <a href="l3.html">
+                <button type="button" class="btn btn-info">3</button>
+            </a>
+            <a href="l4.html">
+                <button type="button" class="btn btn-info">4</button>
+            </a>
+            <a href="l5.html">
+                <button type="button" class="btn btn-info">5</button>
+            </a>
+            <a href="l6.html">
+                <button type="button" class="btn btn-info">6</button>
+            </a>
+            <a href="l7.html">
+                <button type="button" class="btn btn-info">7</button>
+            </a>
+            <a href="l8.html">
+                <button type="button" class="btn btn-info">8</button>
+            </a>
+            <a href="l9.html">
+                <button type="button" class="btn btn-info">9</button>
+            </a>
+            <a href="l10.html">
+                <button type="button" class="btn btn-info">10</button>
+            </a>
 
 
 
-    </div>
+        </nav>
+
     </div>
 
 
