@@ -38,7 +38,7 @@
 
         h3 {
             position: relative;
-            top: 40%;
+            top: 30%;
             margin-bottom: 30%;
             color: white;
         }
@@ -55,7 +55,7 @@
         h6 {
             position: relative;
             left: 7%;
-            top: -7%;
+            top: -4%;
             font-family: 'Kanit', sans-serif;
             color: white;
 
@@ -76,13 +76,14 @@
         .col {
             position: relative;
             margin-top: 50%:
-            left: 0%;
+            left: 40%;
             margin: -10%;
         }
 
         .container {
 
             position: relative;
+            margin-top:0%;
 
         }
 
@@ -91,7 +92,11 @@
 
         .back {
             position: relative;
-            margin-bottom: 10%:
+            margin-bottom: 20%:
+        }
+        .switch{
+            position: relative;
+            margin-top:1%;
         }
 
         nav {
@@ -116,10 +121,12 @@
         var two = new Audio("Asset/2/table2.mp3");
         var t = new Audio("Asset/2/paper.mp3");
         var f = new Audio("Asset/2/table2.mp3");
+        var five = new Audio("Asset/3/joke.mp3");
         var b1 = true;
         var b2 = true;
         var b3 = true;
         var b4 = true;
+        var b5 = true;
 
 
 
@@ -187,6 +194,19 @@
 
             }
         }
+        function a5() {
+
+            if (b5 == true) {
+                five.currentTime = 0;
+                five.play();
+                b5 = false;
+            }
+            else {
+                five.pause();
+                b5 = true;
+
+            }
+        }
 
 
 
@@ -215,7 +235,10 @@
                 <div class="col">
                     <h3>Scence 2 ร้านน้ำชา</h3>
 
-
+                    <div class="back">
+                        <h6>ไก่ขัน(เปิดร้าน)</h6>
+                        <audio src="Asset/2/chicken.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
+                    </div>
                     <div class="back">
                         <h6>เพลงเศร้า</h6>
                         <audio src="Asset/2/sad.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
@@ -229,7 +252,7 @@
                             <audio src="Asset/2/cafe_amb.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
                         </div>
 
-                        
+                          
                     <label class="switch">
                         <input type="checkbox" onchange="a2()">
                         <span class="slider round"></span>
@@ -248,6 +271,11 @@
                     </label>
                     <h6>ทุบโต๊ะ</h6>
 
+                    <label class="switch">
+                        <input type="checkbox" onchange="a5()">
+                        <span class="slider round"></span>
+                    </label>  
+                    <h6>ตบมุข</h6>
 
 
 
