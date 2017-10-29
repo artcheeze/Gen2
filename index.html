@@ -110,11 +110,14 @@
     <script>
      var one = new Audio("Asset/1/h_normal.mp3");
      var two = new Audio("Asset/1/h_fail.mp3");
-     var t = new Audio("Asset/1/phone.mp3")
+     var t = new Audio("Asset/1/phone.mp3");
+     var four = new Audio("Asset/1/beforedie.mp3");
+
     
     var b1 = true;
     var b2 = true;
     var b3 = true;
+    var b4 = true;
 
         
        
@@ -165,6 +168,26 @@
                  }
             }
 
+        function a4(){
+            
+                 if (b4 == true) {
+                    b4 = false;
+                    for (i = 0; i < 99; i++) { 
+                        four.currentTime = 0;
+                        four.play();
+                    }
+                    
+                     
+                     
+                 }
+                 else {
+                     four.pause();
+                     b4 = true;
+                     
+                 }
+            }
+
+
       
        
     </script>
@@ -210,17 +233,10 @@
                     <h6>เครื่องวัดชีพจร(ตาย)</h6>
 
                     <label class="switch">
-                            <input type="checkbox" onchange="a3()">
+                            <input type="checkbox" onchange="a4()">
                             <span class="slider round"></span>
                         </label>
-                        <h6>โทรศัพท์</h6>
-
-
-
-
-
-
-
+                        <h6>เครื่องวัดชีพจร(จะตาย)</h6>
                     <div class="back">
                         <h6>Background music</h6>
                         <audio src="Asset/1/die.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
