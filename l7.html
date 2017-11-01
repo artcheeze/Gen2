@@ -111,10 +111,11 @@
     <link rel="stylesheet" href="button.css">
     <script>
         //var one = new Audio("Asset/6/HumanTalk.mp4");
-       
+        var three = new Audio("Asset/3/paper.mp3");
+        
         var b1 = true;
         //var b2 = true;
-
+        var b3 = true;
 
         function a1() {
 
@@ -130,6 +131,19 @@
             }
         }
 
+        function a3() {
+
+            if (b3 == true) {
+                three.currentTime = 0;
+                three.play();
+                b3 = false;
+            }
+            else {
+                three.pause();
+                b3 = true;
+
+            }
+        }
 
 
     </script>
@@ -173,6 +187,12 @@
                         <audio src="Asset/7/love.mp3" type="audio/mpeg" controls="true" preload="true"> </audio>
                     </div> 
 
+                     <label class="switch">
+                        <input type="checkbox" onchange="a3()">
+                        <span class="slider round"></span>
+                    </label>
+                    
+                    <h6>เสียงเปิดกระดาษ</h6>
                     <!--
                     <span style="color: white">คนคุยกัน</span> <br>
                     <label class="switch">
